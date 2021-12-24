@@ -12,8 +12,8 @@ class User {
     }
 }
 
-// 使用 User 类实例化一个对象，赋值给 user1
-const user1 = new User('小明', 25);
-// user1 是 User 类的实例吗？
-console.log(user1 instanceof User); // true
-console.log(user1);
+// 使用 User 类实例化一个对象，赋值给 user
+const user = new User('小明', 25);
+// user 是 User 类的实例吗？
+console.log(user instanceof User); // true
+console.log(user);
