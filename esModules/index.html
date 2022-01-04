@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ES Modules</title>
+</head>
+<body>
+    <p> Hello ES Modules</p>
+    <script type="module">
+        import fooFunc from './exportDeafult.js';
+        import foo from './mixExport.js'
+        console.log(fooFunc())
+        console.log(foo())
+    </script>
+</body>
+</html>
