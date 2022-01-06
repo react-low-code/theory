@@ -6,11 +6,16 @@
 </head>
 <body>
     <p> Hello ES Modules</p>
+    <!--外部模块-->
+    <script type="module" src="./module.js"></script>
+    <script type="module" src="./module.js"></script>
+    <script type="module" src="./module.js"></script>
+    <!--内联模块-->
     <script type="module">
-        import foo, {count, obj} from './exportDefault.js';
-
-        obj.name = 'change name'
-        console.log(foo())
+        import { count } from './module.js';
+        import React from 'https://cdn.skypack.dev/react'
     </script>
+    <script src='./classic.js'></script>
+    <script src='./classic.js'></script>
 </body>
 </html>

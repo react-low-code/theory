@@ -17,7 +17,3 @@ export var obj = {
 }
 
 export { foo as default, sayName }
-
-if (Math.random() > 0.5) {
-    export var count3 = 0
-}
