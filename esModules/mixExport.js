@@ -1,1 +1,1 @@
-export { default, sayName } from './exportDeafult.js'
+export { default, sayName } from './exportDefault.js'

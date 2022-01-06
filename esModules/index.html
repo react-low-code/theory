@@ -7,9 +7,9 @@
 <body>
     <p> Hello ES Modules</p>
     <script type="module">
-        import fooFunc from './exportDeafult.js';
-        import foo from './mixExport.js'
-        console.log(fooFunc())
+        import foo, {count, obj} from './exportDefault.js';
+
+        obj.name = 'change name'
         console.log(foo())
     </script>
 </body>
