@@ -10,7 +10,7 @@ function getMyPromise(p, finish = false) {
     })
 }
 
-const myPromise1 = getMyPromise('myPromise1的状态会变成 rejected', false)
+const myPromise1 = getMyPromise('myPromise1的状态变成了rejected', false)
 // 注意：在这里我将 myPromise1 传给了 p
 const myPromise2 = getMyPromise(myPromise1, true)
 
