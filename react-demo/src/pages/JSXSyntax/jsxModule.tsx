@@ -5,6 +5,7 @@ const name = 'bella';
 export const jsx =  (
     <div>
         <div>这是JSX语法</div>
+        {undefined}
         <div>如果要访问变量，那么要将变量名用花括号括起来, {name}</div>
     </div>    
 )
