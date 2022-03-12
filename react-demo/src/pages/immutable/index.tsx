@@ -19,7 +19,6 @@ export default  class Immutable extends Component<{}, State> {
   // 错误的案例
   falseCase = () => {
     // 案例一
-    this.state.user.age = 13
     this.setState({
         user: this.state.user, 
     })
@@ -67,7 +66,7 @@ export default  class Immutable extends Component<{}, State> {
   render() {
     return (
       <>
-        <div>Immutable {this.state.user.name}</div>
+        <div>Immutable {this.state.user.age}</div>
 
         <button onClick={this.trueCase}>change</button>
       </>
