@@ -6,7 +6,8 @@ import './App.scss'
 // import Immutable from './pages/immutable';
 // import ClassComponent from './pages/component';
 // import GetDerivedStateFromProps from './pages/getDerivedStateFromProps';
-import RefUse from './pages/ref'
+// import RefUse from './pages/ref'
+import UserDetail from './pages/HOC'
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
           title='title'
         /> */}
         {/* <GetDerivedStateFromProps /> */}
-        <RefUse/>
+        {/* <RefUse/> */}
+        <UserDetail 
+          name='何遇'
+          loading={false}
+        />
     </div>
   );
 }
