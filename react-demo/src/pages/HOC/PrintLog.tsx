@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface Props {
-    loading: boolean
+    loading?: boolean
 }
 
 export default function WithPrintLog<P extends {}>(InnerComponent: React.ComponentType<P>) {

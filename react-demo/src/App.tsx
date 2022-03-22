@@ -7,7 +7,8 @@ import './App.scss'
 // import ClassComponent from './pages/component';
 // import GetDerivedStateFromProps from './pages/getDerivedStateFromProps';
 // import RefUse from './pages/ref'
-import UserDetail from './pages/HOC'
+// import UserDetail from './pages/HOC'
+import { PrintLogOnMount, SubmitLogFromRender } from './pages/renderProps'
 
 function App() {
   return (
@@ -20,9 +21,20 @@ function App() {
         /> */}
         {/* <GetDerivedStateFromProps /> */}
         {/* <RefUse/> */}
-        <UserDetail 
+        {/* <UserDetail 
           name='何遇'
-          loading={false}
+        /> */}
+        <PrintLogOnMount
+          render={() => <div>姓名: 何遇</div>}
+        />
+
+        <SubmitLogFromRender
+          render={(submitLog: (data: string) => void) => (
+            <div>
+              姓名: 何遇
+              <button onClick={() => submitLog('click')}> click </button>
+          </div>
+          )}
         />
     </div>
   );
