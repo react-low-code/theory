@@ -8,7 +8,9 @@ import './App.scss'
 // import GetDerivedStateFromProps from './pages/getDerivedStateFromProps';
 // import RefUse from './pages/ref'
 // import UserDetail from './pages/HOC'
-import { PrintLogOnMount, SubmitLogFromRender } from './pages/renderProps'
+// import { PrintLogOnMount, SubmitLogFromRender } from './pages/renderProps'
+// import { UseStateWithoutFunc } from './pages/useState'
+import FuncComVsClassCom from './pages/funcComVsClassCom'
 
 function App() {
   return (
@@ -24,18 +26,20 @@ function App() {
         {/* <UserDetail 
           name='何遇'
         /> */}
-        <PrintLogOnMount
+        {/* <PrintLogOnMount
           render={() => <div>姓名: 何遇</div>}
-        />
+        /> */}
 
-        <SubmitLogFromRender
+        {/* <SubmitLogFromRender
           render={(submitLog: (data: string) => void) => (
             <div>
               姓名: 何遇
               <button onClick={() => submitLog('click')}> click </button>
           </div>
           )}
-        />
+        /> */}
+        {/* <UseStateWithoutFunc/> */}
+        <FuncComVsClassCom/>
     </div>
   );
 }
