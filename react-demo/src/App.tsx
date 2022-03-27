@@ -9,8 +9,9 @@ import './App.scss'
 // import RefUse from './pages/ref'
 // import UserDetail from './pages/HOC'
 // import { PrintLogOnMount, SubmitLogFromRender } from './pages/renderProps'
-// import { UseStateWithoutFunc } from './pages/useState'
-import FuncComVsClassCom from './pages/funcComVsClassCom'
+import { UseStateBaseDemo, UseStateAdvanceDemo } from './pages/useState'
+// import FuncComVsClassCom from './pages/funcComVsClassCom'
+import UseRefDemo from './pages/useRef'
 
 function App() {
   return (
@@ -38,8 +39,10 @@ function App() {
           </div>
           )}
         /> */}
-        {/* <UseStateWithoutFunc/> */}
-        <FuncComVsClassCom/>
+        {/* <UseStateBaseDemo/> */}
+        {/* <UseStateAdvanceDemo/> */}
+        {/* <FuncComVsClassCom/> */}
+        <UseRefDemo/>
     </div>
   );
 }
