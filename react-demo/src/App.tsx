@@ -12,7 +12,8 @@ import './App.scss'
 // import { UseStateBaseDemo, UseStateAdvanceDemo } from './pages/useState'
 // import FuncComVsClassCom from './pages/funcComVsClassCom'
 // import UseRefDemo from './pages/useRef'
-import { EffectWithoutCleanUp } from './pages/useEffect'
+// import { EffectWithoutCleanUp } from './pages/useEffect'
+import CounterDemo from './pages/useReducer'
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
         {/* <UseStateAdvanceDemo/> */}
         {/* <FuncComVsClassCom/> */}
         {/* <UseRefDemo/> */}
-        <EffectWithoutCleanUp/>
+        {/* <EffectWithoutCleanUp/> */}
+        <CounterDemo/>
     </div>
   );
 }
