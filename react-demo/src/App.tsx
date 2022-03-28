@@ -9,9 +9,10 @@ import './App.scss'
 // import RefUse from './pages/ref'
 // import UserDetail from './pages/HOC'
 // import { PrintLogOnMount, SubmitLogFromRender } from './pages/renderProps'
-import { UseStateBaseDemo, UseStateAdvanceDemo } from './pages/useState'
+// import { UseStateBaseDemo, UseStateAdvanceDemo } from './pages/useState'
 // import FuncComVsClassCom from './pages/funcComVsClassCom'
-import UseRefDemo from './pages/useRef'
+// import UseRefDemo from './pages/useRef'
+import { EffectWithoutCleanUp } from './pages/useEffect'
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
         {/* <UseStateBaseDemo/> */}
         {/* <UseStateAdvanceDemo/> */}
         {/* <FuncComVsClassCom/> */}
-        <UseRefDemo/>
+        {/* <UseRefDemo/> */}
+        <EffectWithoutCleanUp/>
     </div>
   );
 }
