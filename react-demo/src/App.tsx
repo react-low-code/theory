@@ -14,7 +14,8 @@ import './App.scss'
 // import UseRefDemo from './pages/useRef'
 // import { EffectWithoutCleanUp } from './pages/useEffect'
 // import CounterDemo from './pages/useReducer'
-import { TodoListWithoutMemo } from './pages/memoizationHook'
+// import { TodoListWithoutMemo } from './pages/memoizationHook'
+import UseImperativeHandleDemo from './pages/useImperativeHandle'
 
 function App() {
   return (
@@ -48,7 +49,8 @@ function App() {
         {/* <UseRefDemo/> */}
         {/* <EffectWithoutCleanUp/> */}
         {/* <CounterDemo/> */}
-        <TodoListWithoutMemo/>
+        {/* <TodoListWithoutMemo/> */}
+        <UseImperativeHandleDemo/>
     </div>
   );
 }
