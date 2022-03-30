@@ -13,7 +13,8 @@ import './App.scss'
 // import FuncComVsClassCom from './pages/funcComVsClassCom'
 // import UseRefDemo from './pages/useRef'
 // import { EffectWithoutCleanUp } from './pages/useEffect'
-import CounterDemo from './pages/useReducer'
+// import CounterDemo from './pages/useReducer'
+import { TodoListWithoutMemo } from './pages/memoizationHook'
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
         {/* <FuncComVsClassCom/> */}
         {/* <UseRefDemo/> */}
         {/* <EffectWithoutCleanUp/> */}
-        <CounterDemo/>
+        {/* <CounterDemo/> */}
+        <TodoListWithoutMemo/>
     </div>
   );
 }
