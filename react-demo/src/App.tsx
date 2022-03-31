@@ -15,7 +15,8 @@ import './App.scss'
 // import { EffectWithoutCleanUp } from './pages/useEffect'
 // import CounterDemo from './pages/useReducer'
 // import { TodoListWithoutMemo } from './pages/memoizationHook'
-import UseImperativeHandleDemo from './pages/useImperativeHandle'
+// import UseImperativeHandleDemo from './pages/useImperativeHandle'
+import UseLayoutEffectDemo from './pages/useLayoutEffect'
 
 function App() {
   return (
@@ -50,7 +51,8 @@ function App() {
         {/* <EffectWithoutCleanUp/> */}
         {/* <CounterDemo/> */}
         {/* <TodoListWithoutMemo/> */}
-        <UseImperativeHandleDemo/>
+        {/* <UseImperativeHandleDemo/> */}
+        <UseLayoutEffectDemo/>
     </div>
   );
 }
