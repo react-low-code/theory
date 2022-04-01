@@ -17,7 +17,8 @@ import './App.scss'
 // import { TodoListWithoutMemo } from './pages/memoizationHook'
 // import UseImperativeHandleDemo from './pages/useImperativeHandle'
 // import UseLayoutEffectDemo from './pages/useLayoutEffect'
-import UseDebugValueDemo from './pages/useDebugValue'
+// import UseDebugValueDemo from './pages/useDebugValue'
+import CustomHooksDemo from './pages/customHooks'
 
 function App() {
   return (
@@ -54,7 +55,8 @@ function App() {
         {/* <TodoListWithoutMemo/> */}
         {/* <UseImperativeHandleDemo/> */}
         {/* <UseLayoutEffectDemo/> */}
-        <UseDebugValueDemo/>
+        {/* <UseDebugValueDemo/> */}
+        <CustomHooksDemo/>
     </div>
   );
 }
