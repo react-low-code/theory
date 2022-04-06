@@ -18,7 +18,8 @@ import './App.scss'
 // import UseImperativeHandleDemo from './pages/useImperativeHandle'
 // import UseLayoutEffectDemo from './pages/useLayoutEffect'
 // import UseDebugValueDemo from './pages/useDebugValue'
-import CustomHooksDemo from './pages/customHooks'
+// import CustomHooksDemo from './pages/customHooks'
+import ContextDemo from './pages/context'
 
 function App() {
   return (
@@ -56,7 +57,8 @@ function App() {
         {/* <UseImperativeHandleDemo/> */}
         {/* <UseLayoutEffectDemo/> */}
         {/* <UseDebugValueDemo/> */}
-        <CustomHooksDemo/>
+        {/* <CustomHooksDemo/> */}
+        <ContextDemo/>
     </div>
   );
 }

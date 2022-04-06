@@ -4,12 +4,12 @@ function throwErrorWhenNotInProvider() {
     throw Error('你必须自己实现这个方法')
 }
 
-export interface IGlobalContext {
-    lang: string;
-    changeLang: (lang: string) => void
+export interface IMyContext {
+    lang: 'en_US' | 'zh_CN';
+    changeLang: (lang: IMyContext['lang']) => void
 }
 
-export const GlobalContext = React.createContext<IGlobalContext>({
+export const MyContext = React.createContext<IMyContext>({
     lang: 'zh_CN',
     changeLang: throwErrorWhenNotInProvider
 })
