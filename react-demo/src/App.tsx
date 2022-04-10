@@ -12,14 +12,15 @@ import './App.scss'
 // import { UseStateBaseDemo, UseStateAdvanceDemo } from './pages/useState'
 // import FuncComVsClassCom from './pages/funcComVsClassCom'
 // import UseRefDemo from './pages/useRef'
-// import { EffectWithoutCleanUp } from './pages/useEffect'
+// import { EffectWithoutCleanUp, EffectWithCleanUp } from './pages/useEffect'
 // import CounterDemo from './pages/useReducer'
 // import { TodoListWithoutMemo } from './pages/memoizationHook'
 // import UseImperativeHandleDemo from './pages/useImperativeHandle'
 // import UseLayoutEffectDemo from './pages/useLayoutEffect'
 // import UseDebugValueDemo from './pages/useDebugValue'
 // import CustomHooksDemo from './pages/customHooks'
-import ContextDemo from './pages/context'
+// import ContextDemo from './pages/context'
+import { LiftChildren, MemoChildrenDemo } from './pages/reRender'
 
 function App() {
   return (
@@ -52,13 +53,15 @@ function App() {
         {/* <FuncComVsClassCom/> */}
         {/* <UseRefDemo/> */}
         {/* <EffectWithoutCleanUp/> */}
+        {/* <EffectWithCleanUp/> */}
         {/* <CounterDemo/> */}
         {/* <TodoListWithoutMemo/> */}
         {/* <UseImperativeHandleDemo/> */}
         {/* <UseLayoutEffectDemo/> */}
         {/* <UseDebugValueDemo/> */}
         {/* <CustomHooksDemo/> */}
-        <ContextDemo/>
+        {/* <ContextDemo/> */}
+        <LiftChildren/>
     </div>
   );
 }
