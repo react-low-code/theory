@@ -1,3 +1,9 @@
 .big {
     font-size: 100px;
 }
+
+.fold {
+    height: 17px;
+    overflow: hidden;
+}
+

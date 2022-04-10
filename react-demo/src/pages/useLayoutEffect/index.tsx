@@ -3,20 +3,15 @@ import './index.css'
 
 export default function UseLayoutEffectDemo() {
     const divRef = useRef<HTMLDivElement>(null)
-    const [count, setCount] = useState<number>(0)
+    const [fold, setFold] = useState<boolean>()
     
     useLayoutEffect(() => {
-        if (divRef.current) {
-            if (count % 2) {
-                divRef.current.classList.add('big')
-            } else {
-                divRef.current.classList.remove('big')
-            }
+        if (divRef.current && fold === undefined) {
+            setFold(divRef.current.clientHeight > 12)
         }
-    })
+    }, [fold])
 
     return <>
-        <div ref={divRef}>应该使用 useLayoutEffect</div>
-        <button onClick={() => setCount(count + 1)}>click</button>
+        <div className={`${fold ? 'fold' : 'unfold'}`} ref={divRef}>应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect应该使用 useLayoutEffect</div>
     </>
 }
