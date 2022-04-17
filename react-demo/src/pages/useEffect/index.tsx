@@ -26,7 +26,6 @@ export function EffectWithCleanUp() {
         const onBody = () => {/** todo */}
         document.body.addEventListener('click', onBody)
         return () => {
-            // 在组件被销毁之前将事件解绑
             document.body.removeEventListener('click', onBody)
         }
     })
