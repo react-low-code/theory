@@ -1,5 +1,10 @@
-function sum(a: number, b: number) {
-    console.log(a + b)
-}
-sum(1,6)
-export {}
+import Koa from 'koa'
+
+const app = new Koa()
+
+app.use(context => {
+    context.body = 'Hello Koa';
+})
+
+app.listen(3000)
+app.listen(3001)
