@@ -25,4 +25,6 @@ app.use(async (context) => {
     context.body = 'Hello Koa';
 })
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log('正在监听 3000')
+})
