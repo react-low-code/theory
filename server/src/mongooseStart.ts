@@ -1,12 +1,11 @@
 import mongoose from 'mongoose'
 
 async function connect() {
-    await mongoose.connect('mongodb://localhost:27017/school')
+    await mongoose.connect('mongodb://localhost:27017/school', {
+        autoIndex: false,
+        socketTimeoutMS: 300
+    })
 }
-
-connect().catch((err) => {
-    console.log('连接失败',err)
-})
 
 interface ITeacher {
     name: String,
@@ -24,15 +23,25 @@ const Teacher = mongoose.model('teacher', teacherSchema);
 
 const heyu = new Teacher({
     name: 'heyu',
-    grade: 5,
-    salary: 1000
+    grade: 3,
+    salary: 100
 })
 
 heyu.save().then(() => {
-    Teacher.find({ grade: 6 }, (err: mongoose.CallbackError, result: ITeacher) => {
-        console.log(result)
-    });
-    
-    Teacher.updateMany({ grade: 6 }, {$inc: {salary: 1000}}).exec()
+   
+    console.log('save...')
+    // Teacher.updateMany({ grade: 6 }, {$inc: {salary: 1000}}).exec()
 })
 
+
+setTimeout(() => {
+    connect()
+    .then(() => {
+        Teacher.find({ grade: 3 }, (err: mongoose.CallbackError, result: ITeacher) => {
+            console.log(result)
+        });
+    })
+    .catch((err) => {
+        console.log('连接失败',err)
+    })
+}, 6000);

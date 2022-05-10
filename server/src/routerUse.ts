@@ -3,6 +3,9 @@ import Router from '@koa/router'
 import compress from 'koa-compress'
 import bodyParser from 'koa-bodyparser'
 import koaStatic from 'koa-static'
+import schoolConnection from './schoolConnection.js'
+import heyuConnection from './heyuConnection.js'
+
 import multer from '@koa/multer'
 
 
@@ -12,10 +15,25 @@ const upload = multer({
     dest: '/uploads' // 指定文件的保存路径
 });
 router
-    .get('/', (context) => {
+    .get('/', async (context) => {
+        await new schoolConnection.models['teacher']({
+            name: '张三',
+            grade: 2,
+            salary: 1000
+        }).save()
+
+        await new heyuConnection.models['teacher']({
+            name: '张三',
+            grade: 2,
+            salary: 1000
+        }).save()
+
         context.body = '我捕获根路径的get请求'
     })
-    .get('/user', context => {
+    .get('/user', async (context) => {
+        const schoolResult  = await schoolConnection.models['teacher'].find({grade: 2})
+        const heyuResult = await heyuConnection.models['teacher'].find({grade: 2})
+        console.log(schoolResult, heyuResult)
         context.body = '我捕获路径是/user的get请求'
     })
     .post('/user', context => {
