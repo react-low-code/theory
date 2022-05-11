@@ -6,6 +6,7 @@ import koaStatic from 'koa-static'
 import schoolConnection from './schoolConnection.js'
 import heyuConnection from './heyuConnection.js'
 
+
 import multer from '@koa/multer'
 
 
@@ -20,7 +21,8 @@ router
             name: '张三',
             grade: 2,
             salary: 1000
-        }).save()
+        })
+        .save()
 
         await new heyuConnection.models['teacher']({
             name: '张三',
@@ -35,6 +37,20 @@ router
         const heyuResult = await heyuConnection.models['teacher'].find({grade: 2})
         console.log(schoolResult, heyuResult)
         context.body = '我捕获路径是/user的get请求'
+    })
+    .get('/teacher', async (context) => {
+        const { name = 'default', grade = 0, salary = 0 } = context.query
+        const doc = new heyuConnection.models['teacher']({
+            name,
+            grade,
+            salary
+        })
+        const res = await  doc.findSimilarGrade()
+
+        const resStatic = await (heyuConnection.models['teacher'] as any).findSimilarGrade(grade)
+
+        console.log(res,'sss', resStatic)
+        context.body = '我捕获路径是/teacher的get请求'
     })
     .post('/user', context => {
         context.body = '我捕获路径是/user的post请求'
