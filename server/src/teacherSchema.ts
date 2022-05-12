@@ -30,4 +30,26 @@ teacherSchema.methods.findSimilarGrade = async function() {
     return await this.db.models['teacher'].find({grade: this.grade})
 }
 
+teacherSchema.pre('save', function() {
+    console.log('save pre one')
+})
+
+teacherSchema.pre('save', function() {
+    console.log('save pre two')
+})
+
+teacherSchema.post('save', function() {
+    console.log('save post one')
+})
+// document 中间件
+teacherSchema.pre('remove', { document: true, query: false }, function() {
+    console.log('移除 document');
+})
+
+// query 中间件
+teacherSchema.pre('remove', { document: false, query: true }, function() {
+    console.log('即将执行Model.remove()，从 collection 中移除所有符合条件的 document');
+})
+
+
 export default teacherSchema
